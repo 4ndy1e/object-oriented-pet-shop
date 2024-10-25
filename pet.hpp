@@ -9,8 +9,10 @@ using namespace std;
 
 class pet {
   public:
-    pet();
-    pet(string name, int weight) {this->name = name; this->weight = weight;};
+    pet(string name, int weight) {this->name = name; this->weight = weight;}
+    int getPetCount() { return petCount;}
+    string getPetName() { return name;}
+    float calculateFee() { }
 
   private:
     static int petCount;
