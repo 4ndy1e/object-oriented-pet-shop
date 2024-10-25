@@ -9,15 +9,14 @@ using namespace std;
 
 class pet {
   public:
-    pet(string name, int weight) {this->name = name; this->weight = weight;}
+    pet(string name, float weight) {this->name = name; this->weight = weight;}
     int getPetCount() { return petCount;}
     string getPetName() { return name;}
-    float calculateFee() { }
-
+    float getWeight() { return weight;}
   private:
     static int petCount;
     string name;
-    int weight;
+    float weight;
 };
 
 #endif
