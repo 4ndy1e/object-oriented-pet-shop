@@ -1,21 +1,21 @@
-#ifndef dog_hpp
-#define dog_hpp
+#ifndef Dog_hpp
+#define Dog_hpp
 
-#include "pet.hpp"
+#include "Pet.hpp"
 #include <string>
 #include <iostream>
 
 using namespace std;
 
-class dog : public pet {
+class Dog : public Pet {
   public:
-    dog(string name, float weight) : pet(name, weight) { 
-    this->fee = 2;
+    Dog(string name, float weight) : Pet(name, weight) { 
+      this->fee = 2;
     }
-    void bark() { cout << getPetName() << " barked\n";}
-    void eat() { cout << getPetName() << " ate\n";}
-    float calculateFee() { return fee * getWeight();}
-    
+    void bark() { cout << getPetName() << " barked\n"; }
+    void eat() { cout << getPetName() << " ate\n"; }
+    float calculateFee() { return fee * getWeight(); }
+
   private: 
     float fee;  
 };

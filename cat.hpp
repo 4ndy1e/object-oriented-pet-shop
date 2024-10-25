@@ -1,21 +1,21 @@
-#ifndef cat_hpp
-#define cat_hpp
+#ifndef Cat_hpp
+#define Cat_hpp
 
-#include "pet.hpp"
+#include "Pet.hpp"
 #include <string>
 #include <iostream>
 
 using namespace std;
 
-class cat : public pet {
+class Cat : public Pet {
   public:
-    cat(string name, float weight) : pet(name, weight) {
-      this->fee = 1.50;
-    };
-    void meow() { cout << getPetName() << " meowed\n";}
-    void eat() { cout << getPetName() << " ate\n";}
-    float calculateFee() { return fee * getWeight();}
-    
+    Cat(string name, float weight) : Pet(name, weight) { 
+      this->fee = 2;
+    }
+    void meow() { cout << getPetName() << " meowed\n"; }
+    void eat() { cout << getPetName() << " ate\n"; }
+    float calculateFee() { return fee * getWeight(); }
+
   private: 
     float fee;  
 };

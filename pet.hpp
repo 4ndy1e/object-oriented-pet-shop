@@ -1,22 +1,21 @@
-#ifndef pet_hpp
-#define pet_hpp
+#ifndef Pet_hpp
+#define Pet_hpp
 
-#include "dog.hpp"
-#include "cat.hpp"
 #include <string>
 
 using namespace std;
 
-class pet {
+class Pet {
   public:
-    pet(string name, float weight) {this->name = name; this->weight = weight;}
-    int getPetCount() { return petCount;}
-    string getPetName() { return name;}
-    float getWeight() { return weight;}
+    Pet(string name, float weight) : name(name), weight(weight) { petCount++; }
+    int getPetCount() { return petCount; }
+    string getPetName() { return name; }
+    float getWeight() { return weight; }
+    
   private:
-    static int petCount;
     string name;
     float weight;
+    static int petCount;
 };
 
 #endif
