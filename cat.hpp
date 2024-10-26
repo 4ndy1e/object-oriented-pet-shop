@@ -10,7 +10,7 @@ using namespace std;
 class Cat : public Pet {
   public:
     Cat(string name, float weight) : Pet(name, weight) { 
-      this->fee = 2;
+      this->fee = 1.50;
     }
     void meow() { cout << getPetName() << " meowed\n"; }
     void eat() { cout << getPetName() << " ate\n"; }

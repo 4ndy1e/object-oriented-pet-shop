@@ -7,15 +7,14 @@ using namespace std;
 
 class Pet {
   public:
-    Pet(string name, float weight) : name(name), weight(weight) { petCount++; }
-    int getPetCount() { return petCount; }
+    Pet(string name, float weight) : name(name), weight(weight) {} 
     string getPetName() { return name; }
     float getWeight() { return weight; }
+    virtual float calculateFee() = 0;
     
   private:
     string name;
     float weight;
-    static int petCount;
 };
 
 #endif

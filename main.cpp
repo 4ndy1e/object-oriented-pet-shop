@@ -6,9 +6,6 @@
 #include <iostream>
 
 using namespace std;
-#include <string>
-
-int Pet::petCount = 0;
 
 int main(int argc, char* argv[]) {
   // create pets
